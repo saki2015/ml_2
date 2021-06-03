@@ -1,0 +1,18 @@
+Model was trained using nyc_fare_prediction_model-Copy.ipynb
+This saved all of the following :
+catpipe.sav
+numpipe.sav
+scaler.sav
+nyc_stacked_model.sav
+
+The first 3 are for the transformations;
+in order to perform  transformations on the test data,
+we load the *pipe.sav files;
+then we load the trained model nyc_stacked_model.sav
+and use it to predict the fare.
+
+The following runs the Flask app in Docker, where the UI allows teh user to
+enter the latitude/longitude/ date/time for the cab ride
+and displays the predicted fare.
+
+docker run -d -p 5007:5000 --name nyc nyc_flask 
