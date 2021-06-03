@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>NYC Fare Prediction Form</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <form method=post enctype=multipart/form-data>
+	<p>
+	<label for="src_lat"> pickup latitude:</label> 
+	    <input type="number" step = "any" name="src_lat" min="-90" max="90">
+	</p>
+	<p>
+	<label for="src_long"> pickup longitude:</label> 
+            <input type="number" step = "any" name="src_long" min="-180" max="180">
+	</p>
+	<p>
+	<label for="dest_lat"> dropoff latitude:</label> 
+            <input type="number" step = "any" name="dest_lat" min="-90" max="90">
+	</p>
+	<p>
+	<label for="dest_long"> dropoff longitude:</label> 
+            <input type="number" step = "any" name="dest_long" min="-180" max="180">
+	</p>
+	<p>
+	<label for="num_passengers"> passenger count:</label> 
+            <input type=number name="num_passengers"><br>
+	</p>
+	<p>
+	<label for="pickup_date_time"> pickup date time:</label> 
+            <input type=datetime-local step="any" name="pick_date_time" >
+	</p>
+	<p>
+	<label for="subm">     </label> 
+        <input type=submit name="subm" value=Submit>
+	</p>
+   </form>
+    <div class="row">
+    <p>
+    Predicted Fare: {{ pred }}
+    </p>
+    </div>
+  </div>
+</body>
+</html>
