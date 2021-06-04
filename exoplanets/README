@@ -1,0 +1,10 @@
+This was a highly imbalanced dataset.
+The training data had an imbalance of 5050:37
+
+So tried out the various sampling techniques like SMOTE, ADASYN;
+also tried using the balancing related parameters for the various classifiers.
+Despite trying out hyperparameter tuning for XGBoost using GridSearch, didn't get good recall scores
+for the classifier.
+
+The classifiers which gave good recall scores of 0.8 and close to 0.75 AUC were:
+EasyEnsembleClassifier, BalancedRandomForesClassifier
