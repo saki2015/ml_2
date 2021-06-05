@@ -1,0 +1,8 @@
+House price prediction using model stacking
+using the following as level0 estimators:
+KNN, DecisionTree, SVR, RF, LGBM, XGB
+
+and XGBRegressor as the level1 estimator.
+
+Used scikit's StackingRegressor to create the stacked model.
+Also tried Lasso standalone + ANN; but the stacked model gave the best results.
